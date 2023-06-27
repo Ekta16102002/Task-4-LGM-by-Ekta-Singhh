@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 300;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(http://images6.fanpop.com/image/photos/34600000/Pink-Cherry-Blossom-flowers-34658308-1600-1200.jpg);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 200;
+  border: 3px solid rgb(108, 106, 106);
+  border-radius: 40px;
+  outline: none;
+  background-color: rgba(235, 226, 232, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(242, 148, 204, 0.648);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  border: 3px solid rgb(108, 106, 106);
+  border-radius: 40px;
+  grid-column: 1 / -1;
+  background-color: rgba(2, 2, 2, 0.648);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(248, 169, 213, 0.75);
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.output .current-operand {
+  color: rgba(238, 196, 215, 0.75);
+  font-size: 2.5rem;
+  font-weight: 200;
+}
